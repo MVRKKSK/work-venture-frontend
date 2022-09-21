@@ -106,12 +106,12 @@ export const Profile = () => {
                     <div>
 
                         <section className="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-100">
-                            <div className="container p-6 mx-auto space-y-8">
+                            <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
                                 <div className="space-y-2 text-center">
                                     <h2 className="text-3xl font-bold">Work Posts Posted By You</h2>
                                     <p className="font-serif text-sm dark:text-gray-400">Here are the latest Work Posts posted by you . You can delete after you find a member</p>
                                 </div>
-                                <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+                                <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                     {workdata.map((work, index) => {
                                         return (
                                             <div key={index} rel="noopener noreferrer" className="max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-900">
@@ -133,12 +133,12 @@ export const Profile = () => {
                         </section>
                         <>
                             <section className="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-100">
-                                <div className="container p-6 mx-auto space-y-8">
+                                <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
                                     <div className="space-y-2 text-center">
                                         <h2 className="text-3xl font-bold">Events Posted by You</h2>
                                         <p className="font-serif text-sm dark:text-gray-400">Here are the latest Events . You can delete after you find a member</p>
                                     </div>
-                                    <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+                                    <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                         {eventdata.map((event, index) => {
                                             return (
 
