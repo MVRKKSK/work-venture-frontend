@@ -20,7 +20,7 @@ export const Main = () => {
                                             to make it a grand success then Work Venture consists of a platform where you can host events globally..
                                         </p>
                                         <div className="flex items-center mt-4 space-x-4">
-                                            <img src="https://source.unsplash.com/50x50/?portrait?1" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
+                                           
                                             <div>
                                                 <p className="text-lg font-semibold">Events</p>
                                                 <p className="text-sm dark:text-gray-400">Host</p>
@@ -28,34 +28,32 @@ export const Main = () => {
                                         </div>
                                     </div>
                                     <div className="p-6 rounded shadow-md dark:bg-gray-900">
-                                        <p>Sit wisi sapientem ut, pri civibus temporibus voluptatibus et, ius cu hinc fabulas. Nam meliore minimum et, regione convenire cum id. Ex pro eros mucius consectetuer, pro magna nulla nonumy ne, eam putent iudicabit consulatu cu.</p>
+                                        <p>Have any doubt or want to discuss with anyone something then work venture is the right place to make it happen . In the live Discussion panel user can discuss their doubt or ask anything with the users around the world in just one click .</p>
                                         <div className="flex items-center mt-4 space-x-4">
-                                            <img src="https://source.unsplash.com/50x50/?portrait?2" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
+                                            
                                             <div>
-                                                <p className="text-lg font-semibold">Leroy Jenkins</p>
-                                                <p className="text-sm dark:text-gray-400">CTO of Company Co.</p>
+                                                <p className="text-lg font-semibold">Discussion Page</p>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="grid content-center gap-4">
                                     <div className="p-6 rounded shadow-md dark:bg-gray-900">
-                                        <p>Putant omnium elaboraret per ut. Id dicta tritani nominavi quo, mea id justo errem elaboraret. Agam mollis scripserit ea his, ut nec postea verear persecuti. Ea noster senserit eam, ferri omittantur ei nec. Id mel solet libris efficiantur, commune explicari et eos. Case movet ad est, sed tota vocent appetere ea.</p>
+                                        <p>In this Era of competition the early graduate or post graduate students always think about of new ideas and want to make it live with some developers , this can happen by work venture where you can ask other developers to work in your project world wide . </p>
                                         <div className="flex items-center mt-4 space-x-4">
-                                            <img src="https://source.unsplash.com/50x50/?portrait?3" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
+                                            
                                             <div>
-                                                <p className="text-lg font-semibold">Leroy Jenkins</p>
-                                                <p className="text-sm dark:text-gray-400">CTO of Company Co.</p>
+                                                <p className="text-lg font-semibold">Work Section</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="p-6 rounded shadow-md dark:bg-gray-900">
-                                        <p>Te omnes virtute volutpat sed. Ei esse eros interesset vel, ei populo denique ocurreret vix, eu cum pertinax mandamus vituperatoribus. Solum nihil luptatum per ex, ei amet viderer eos. Ea illum labitur mnesarchum pro. Eius meis salutandi ei nam, alterum expetenda et nec. Expetenda intellegat at eum, per mazim sanctus honestatis ad. Ei noluisse invenire vix. Te ancillae patrioque qui, probo bonorum vivendum ex vim.</p>
+                                        <p>As Each and every developers follows mails regularly , work venture send each and every update to the user withing seconds by just clicking the apply or register button . And it just happens in one click</p>
                                         <div className="flex items-center mt-4 space-x-4">
-                                            <img src="https://source.unsplash.com/50x50/?portrait?4" alt="" className="w-12 h-12 bg-center bg-cover rounded-full dark:bg-gray-500" />
+                                            
                                             <div>
-                                                <p className="text-lg font-semibold">Leroy Jenkins</p>
-                                                <p className="text-sm dark:text-gray-400">CTO of Company Co.</p>
+                                                <p className="text-lg font-semibold">Email authentication</p>
+                                                {/* <p className="text-sm dark:text-gray-400">CTO of Company Co.</p> */}
                                             </div>
                                         </div>
                                     </div>

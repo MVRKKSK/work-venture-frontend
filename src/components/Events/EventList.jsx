@@ -47,7 +47,7 @@ export const EventList = () => {
 	return (
 		<>
 			<Navbar />
-			<div className="dark:bg-gray-800 dark:text-gray-50">
+			<div className="bg-gray-800 text-gray-50">
 				<ul className="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 " >
 					<li className="nav-item flex-auto text-center" >
 						<a href="/EventList" className="
@@ -87,10 +87,10 @@ export const EventList = () => {
 					</li>
 				</ul>
 			</div>
-			<section className="dark:bg-gray-800 dark:text-gray-100">
+			<section className="bg-gray-800 text-gray-100">
 				<div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
-					<p rel="noopener noreferrer" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
-						<img src="https://www.nyit.edu/files/events/Event_20181004_NavigatingTheTechCenterMarketplace_Hero.jpg" alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500" />
+					<p rel="noopener noreferrer" className="block max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 bg-gray-900">
+						<img src="https://www.nyit.edu/files/events/Event_20181004_NavigatingTheTechCenterMarketplace_Hero.jpg" alt="" className="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 bg-gray-500" />
 						<div className="p-6 space-y-2 lg:col-span-5">
 							<h3 className="text-2xl font-semibold sm:text-4xl">Want to Host an Event ?</h3>
 							<p className="text-2xl pb-16 text-amber-200">Host any college events , Coding camps , Workshops by an Ease ....</p>
@@ -104,14 +104,14 @@ export const EventList = () => {
 						{eventdata.map((event, index) => {
 
 							return (
-								<div rel="noopener noreferrer" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
-									<img className="object-cover w-full rounded h-44 dark:bg-gray-500" alt="" src={`https://source.unsplash.com/random/480x360?${index}`} />
+								<div key={index} rel="noopener noreferrer" className="max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-900">
+									<img className="object-cover w-full rounded h-44 bg-gray-500" alt="" src={event.image} />
 									<div className="p-6 space-y-2">
 										<h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{event.name}</h3>
-										<span className="text-xs dark:text-gray-400">January 21, 2021</span>
+										<span className="text-xs text-gray-400">January 21, 2021</span>
 										<p>{event.description}</p>
 										{/* <form onSubmit={handleSubmit}> */}
-										<button onClick={handleSubmit} type="submit" value={event.link} name="link"  className="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100">Register</button>
+										<button onClick={handleSubmit} type="submit" value={event.link} name="link"  className="px-8 py-3 font-semibold border rounded border-gray-100 text-gray-100">Register</button>
 										{/* </form> */}
 									</div>
 								</div>

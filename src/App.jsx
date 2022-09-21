@@ -15,11 +15,12 @@ import { CollegeEventList } from "./components/Events/CollegeEvents";
 import { SuccessPage } from "./components/Events/SuccessPage";
 import { Profile } from "./components/profile/Profile";
 import Discussion from "./components/discussion/Discussion";
+import { SuccessPageWork } from "./components/Events/SuccessPagework";
 
 function App() {
   const { user } = useSelector((state) => ({ ...state }));
   return (
-    <div className="dark:bg-gray-800">
+    <div className="bg-gray-800">
       <Routes>
         <Route element={<LoggedInRoutes />}>
           <Route path="/" element ={<Home />} exact />
@@ -28,6 +29,7 @@ function App() {
           {/* <Route path="/events" user={user} element ={<Event />} exact /> */}
           <Route path="/work" user={user} element ={<Work />} exact />
           <Route path="/SuccessPage" user={user} element ={<SuccessPage />} exact />
+          <Route path="/SuccessPageWork" user={user} element ={<SuccessPageWork />} exact />
           <Route path="/Profile" user={user} element ={<Profile />} exact />
           <Route path="/CollegeProjects" user={user} element ={<CollegeProjects />} exact />
           <Route path="/PostWork" user={user} element ={<PostWork />} exact />
