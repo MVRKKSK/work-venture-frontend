@@ -4,7 +4,7 @@ import io from 'socket.io-client'
 import { Navbar } from "../home/navbar/Navbar";
 import "./Discussion.css";
 
-const socket = io('http://localhost:7000')
+const socket = io('https://discussion-backend.herokuapp.com/')
 // const userName = 'User '+parseInt(Math.random()*10)
 function Discussion() {
     const { user } = useSelector((state) => ({ ...state }));
