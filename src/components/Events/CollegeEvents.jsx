@@ -4,18 +4,22 @@ import { Navbar } from "../home/navbar/Navbar";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { API } from "../../config";
+import moment from "moment"
+import { useNavigate } from "react-router-dom";
 
 
 export const CollegeEventList = () => {
     const { user } = useSelector((state) => ({ ...state }));
 	const [eventdata, setEventdata] = useState([]);
-
+	const navigate = useNavigate();
+	const {college} = user
+	console.log(college)
 
 	useEffect(() => {
 		try {
 			async function getData() {
 				// eslint-disable-next-line react-hooks/exhaustive-deps
-				const { data } = await axios.post(`${API}/getEventsbyCollege`,  {college: user.college} );
+				const { data } = await axios.post(`${API}/getEventsbyCollege`,  {college:college} );
 				setEventdata(data);
 			}
 				// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -27,7 +31,24 @@ export const CollegeEventList = () => {
 		}
 				// eslint-disable-next-line react-hooks/exhaustive-deps
 
-	}, [user.college])
+	}, [college])
+
+	console.log(eventdata)
+
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		const link = e.target.value
+		const name = user.name
+		const email = user.email
+		const data = await axios.post(`${API}/email`, { link, name, email })
+			.then(res => res.data).catch(err => console.log(err));
+		if(data){
+			// setSuccess(true);
+			navigate("/SuccessPage");
+			return;
+		}
+
+	}
 
 
 
@@ -88,17 +109,19 @@ export const CollegeEventList = () => {
 					</p>
 					<div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
 
-						{eventdata.slice(1).map((event, index) => {
+						{eventdata.map((event, index) => {
 							return (
-								<a rel="noopener noreferrer" href="/" className="max-w-sm mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
-									<img alt="" className="object-cover w-full rounded h-44 dark:bg-gray-500" src={`https://source.unsplash.com/random/480x360?${index}`} />
+								<div key={index} rel="noopener noreferrer" className="max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-900">
+									<img className="object-cover w-full rounded h-44 bg-gray-500" alt="" src={event.image} />
 									<div className="p-6 space-y-2">
 										<h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{event.name}</h3>
-										<span className="text-xs dark:text-gray-400">January 21, 2021</span>
+										<span className="text-xs text-gray-400">{moment(event.createdAt).format('MMM DD, YYYY')}</span>
 										<p>{event.description}</p>
-										<button type="button" className="px-8 py-3 font-semibold border rounded dark:border-gray-100 dark:text-gray-100">Register</button>
+										{/* <form onSubmit={handleSubmit}> */}
+										<button onClick={handleSubmit} type="submit" value={event.link} name="link"  className="px-8 py-3 font-semibold border rounded border-gray-100 text-gray-100">Register</button>
+										{/* </form> */}
 									</div>
-								</a>
+								</div>
 							)
 
 						})}

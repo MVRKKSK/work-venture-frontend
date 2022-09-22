@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { Navbar } from "../home/navbar/Navbar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import moment from "moment";
 import { useSelector } from "react-redux";
 import { API } from "../../config";
 
@@ -108,7 +108,7 @@ export const EventList = () => {
 									<img className="object-cover w-full rounded h-44 bg-gray-500" alt="" src={event.image} />
 									<div className="p-6 space-y-2">
 										<h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{event.name}</h3>
-										<span className="text-xs text-gray-400">January 21, 2021</span>
+										<span className="text-xs text-gray-400">{moment(event.createdAt).format('MMM DD, YYYY')}</span>
 										<p>{event.description}</p>
 										{/* <form onSubmit={handleSubmit}> */}
 										<button onClick={handleSubmit} type="submit" value={event.link} name="link"  className="px-8 py-3 font-semibold border rounded border-gray-100 text-gray-100">Register</button>

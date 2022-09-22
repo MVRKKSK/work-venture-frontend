@@ -26,6 +26,8 @@ export const Profile = () => {
         getWorkData();
     }, [email]);
 
+    console.log(workdata)
+
     const [eventdata, setEventdata] = useState([]);
 
     useEffect(() => {
@@ -72,7 +74,7 @@ export const Profile = () => {
             <Navbar />
 
             <div class="p-16">
-                <div class="p-8  shadow mt-24">
+                <div class="shadow mt-24">
                     <div class="grid grid-cols-1 md:grid-cols-3">
                         <div class="grid grid-cols-3 text-center order-last md:order-first mt-20 md:mt-0">
                             <div>
@@ -93,7 +95,7 @@ export const Profile = () => {
                     </div>
 
                     <div class="mt-20 text-center border-b pb-12">
-                        <h1 class="text-4xl font-medium text-white">{userdetails.name} <span class="font-light text-gray-500"></span></h1>
+                        <h1 class="text-4xl font-medium dark:text-gray-500">{userdetails.name} <span class="font-light text-gray-500"></span></h1>
                         <p class="font-light text-gray-600 mt-3">{userdetails.email}</p>
                         <button onClick={handleLogout} class="font-bold text-white text-md">log out</button>
 
@@ -106,26 +108,27 @@ export const Profile = () => {
                     <div>
 
                         <section className="py-6 sm:py-12 dark:bg-gray-800 dark:text-gray-100">
-                            <div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
+                            <div className="container max-w-6xl mx-auto space-y-6 sm:space-y-12">
                                 <div className="space-y-2 text-center">
                                     <h2 className="text-3xl font-bold">Work Posts Posted By You</h2>
                                     <p className="font-serif text-sm dark:text-gray-400">Here are the latest Work Posts posted by you . You can delete after you find a member</p>
                                 </div>
                                 <div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                                     {workdata.map((work, index) => {
+                                        console.log(work.image)
                                         return (
                                             <div key={index} rel="noopener noreferrer" className="max-w-sm mx-auto group hover:no-underline focus:no-underline bg-gray-900">
-                                                    <img className="object-cover w-full rounded h-44 bg-gray-500" alt="" src={work.image} />
-                                                    <div className="p-6 space-y-2">
-                                                        <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{work.title}</h3>
-                                                        <p>{work.description}</p>
-                                                        {/* <form onSubmit={handleSubmit}> */}
-                                                        <button onClick={(e)=> handlePostDelete(e.target.value)} type="submit" value={work._id} name="link" className="px-8 py-3 font-semibold border rounded border-gray-100 text-gray-100">Delete</button>
-                                                        {/* </form> */}
-                                                    </div>
-
-                                                    {/* onClick={(e)=> handleEventDelete(e.target.value)} */}
+                                                <img className="object-cover w-full rounded h-44 bg-gray-500" alt="" src={work.image} />
+                                                <div className="p-6 space-y-2">
+                                                    <h3 className="text-2xl font-semibold group-hover:underline group-focus:underline">{work.title}</h3>
+                                                    <p>{work.description}</p>
+                                                    {/* <form onSubmit={handleSubmit}> */}
+                                                    <button onClick={(e) => handlePostDelete(e.target.value)} type="submit" value={work._id} name="link" className="px-8 py-3 font-semibold border rounded border-gray-100 text-gray-100">Delete</button>
+                                                    {/* </form> */}
                                                 </div>
+
+                                                {/* onClick={(e)=> handleEventDelete(e.target.value)} */}
+                                            </div>
                                         )
                                     })}
                                 </div>
@@ -150,7 +153,7 @@ export const Profile = () => {
                                                         <span className="text-xs text-gray-400">January 21, 2021</span>
                                                         <p>{event.description}</p>
                                                         {/* <form onSubmit={handleSubmit}> */}
-                                                        <button onClick={(e)=> handleEventDelete(e.target.value)} type="submit" value={event._id} name="link" className="px-8 py-3 font-semibold border rounded border-gray-100 text-gray-100">Delete</button>
+                                                        <button onClick={(e) => handleEventDelete(e.target.value)} type="submit" value={event._id} name="link" className="px-8 py-3 font-semibold border rounded border-gray-100 text-gray-100">Delete</button>
                                                         {/* </form> */}
                                                     </div>
 

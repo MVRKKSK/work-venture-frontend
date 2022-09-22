@@ -4,7 +4,7 @@ import logo from "./navbar/logo.png"
 export const Main = () => {
     return (
         <>
-            <section className="dark:bg-gray-800 dark:text-white">
+            <section className="dark:bg-gray-800 dark:text-gray-500">
                 <div className="container px-6 py-12 mx-auto">
                     <div className="grid items-center gap-4 xl:grid-cols-5">
                         <div className="max-w-2xl mx-auto my-8 space-y-4 text-center xl:col-span-2 xl:text-left">
@@ -63,7 +63,7 @@ export const Main = () => {
                     </div>
                 </div>
             </section>
-            <section className="dark:bg-gray-800 dark:text-white">
+            <section className="dark:bg-gray-800 dark:text-gray-500">
                 <div className="container max-w-5xl px-4 py-12 mx-auto">
                     <div className="grid gap-4 mx-4 sm:grid-cols-12">
                         <div className="col-span-12 sm:col-span-3">
