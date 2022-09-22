@@ -95,12 +95,12 @@ export const Profile = () => {
                     </div>
 
                     <div class="mt-20 text-center border-b pb-12">
-                        <h1 class="text-4xl font-medium dark:text-gray-500">{userdetails.name} <span class="font-light text-gray-500"></span></h1>
-                        <p class="font-light text-gray-600 mt-3">{userdetails.email}</p>
+                        <h1 class="text-4xl font-medium dark:text-slate-100">{userdetails.name} <span class="font-light text-slate-100"></span></h1>
+                        <p class="font-light text-slate-100 mt-3">{userdetails.email}</p>
                         <button onClick={handleLogout} class="font-bold text-white text-md">log out</button>
 
-                        <p class="mt-8 text-gray-500"></p>
-                        <p class="mt-2 text-gray-500">{userdetails.college}</p>
+                        <p class="mt-8 text-slate-100"></p>
+                        <p class="mt-2 text-slate-100">{userdetails.college}</p>
 
 
                     </div>

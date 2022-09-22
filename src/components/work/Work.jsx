@@ -54,7 +54,7 @@ export const Work = () => {
 			{workdata.map((work, index) => {
 				// console.log(work.image)
 				return (
-					<div key = {index} className="bg-gray-800 dark::text-gray-500 pb-8">
+					<div key = {index} className="bg-gray-800 dark:text-slate-100 pb-8">
 						<div className="container grid grid-cols-12 mx-auto bg-gray-900">
 							<div className="bg-no-repeat object-cover bg-gray-700 col-span-full lg:col-span-4" style={{ "backgroundImage": `url(${work.image})`, "backgroundPosition": "center", "backgroundBlendMode": "multiply", "backgroundSize": "cover" }}></div>
 							<div className="flex flex-col p-6 col-span-full row-span-full lg:col-span-8 lg:p-10">
