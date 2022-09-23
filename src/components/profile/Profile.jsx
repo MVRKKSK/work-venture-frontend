@@ -95,7 +95,7 @@ export const Profile = () => {
                     </div>
 
                     <div class="mt-20 text-center border-b pb-12">
-                        <h1 class="text-4xl font-medium dark:text-slate-100">{userdetails.name} <span class="font-light text-slate-100"></span></h1>
+                        <h1 class="text-4xl font-medium text-gray-50">{userdetails.name} <span class="font-light text-slate-100"></span></h1>
                         <p class="font-light text-slate-100 mt-3">{userdetails.email}</p>
                         <button onClick={handleLogout} class="font-bold text-white text-md">log out</button>
 

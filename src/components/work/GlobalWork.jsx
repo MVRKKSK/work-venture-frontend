@@ -2,7 +2,7 @@ import React from "react";
 
 export const GlobalWork = () => {
     return (
-        <div className="dark:bg-gray-800 dark:text-gray-50">
+        <div className="dark:bg-gray-800 text-gray-50">
             <ul className="nav nav-tabs flex flex-col md:flex-row flex-wrap list-none border-b-0 pl-0 " id="tabs-tabFill"
                 role="tablist">
                 <li className="nav-item flex-auto text-center" role="presentation">
